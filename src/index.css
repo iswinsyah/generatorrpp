@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f3f4f6; /* Abu-abu muda agar kertas putih terlihat kontras */
+}
+
+/* Styling khusus area cetak di layar */
+.print-area {
+  font-family: 'Times New Roman', Times, serif; /* Font standar dokumen resmi */
+  background: white;
+  width: 210mm; /* Lebar A4 */
+  min-height: 297mm; /* Tinggi A4 */
+  padding: 20mm; /* Margin standar */
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Styling saat tombol Print ditekan */
+@media print {
+  @page {
+    size: A4;
+    margin: 0; /* Hilangkan margin browser, kita atur di CSS */
+  }
+
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important; /* Sembunyikan navbar & editor */
+  }
+
+  .print-area {
+    width: 100%;
+    margin: 0;
+    padding: 20mm; /* Margin kertas saat diprint */
+    box-shadow: none;
+    border: none;
+  }
+  
+  /* Pastikan tabel tidak terpotong jelek saat pindah halaman */
+  tr {
+    page-break-inside: avoid;
+  }
+}
