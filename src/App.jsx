@@ -102,7 +102,7 @@ function App() {
       {/* Navbar Sederhana (No Print) */}
       <nav className="bg-blue-900 text-white p-4 shadow-md no-print">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <h1 className="text-xl font-bold">Generator Modul Ajar / RPP (v1.1)</h1>
+          <h1 className="text-xl font-bold">Generator Modul Ajar / RPP (v1.2)</h1>
           <button 
             onClick={handlePrint}
             className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded shadow transition"
